@@ -1,7 +1,41 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`)
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  const { createPage } = actions
+  const eventTemplate = path.resolve(`src/templates/event.js`)
+  const result = await graphql(`
+    {
+      allAirtable {
+        nodes {
+          data {
+            id
+            Title
+            Description
+            Date
+            City
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panic(
+      `Error loading events`,
+      JSON.stringify(result.errors)
+    )
+  }
+
+  const events = result.data.allAirtable.nodes
+
+  // create page for each Airtable node
+  events.forEach(event => {
+    createPage({
+      path: `/events/${event.data.id}`,
+      component: eventTemplate,
+      context: {
+        id: event.data.id,
+      },
+    })
+  })
+}
