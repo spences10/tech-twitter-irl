@@ -12,9 +12,9 @@ export default function IndexPage({ data }) {
   data.allAirtable.nodes.map(event => {
     event = event.data
     if (new Date(event.Date) >= new Date()) {
-      futureEvents.push(event)
+      return futureEvents.push(event)
     } else {
-      pastEvents.push(event)
+      return pastEvents.push(event)
     }
   })
 
