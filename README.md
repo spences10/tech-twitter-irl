@@ -14,6 +14,9 @@ of the Tech Twitter Community.
 
 It is built with [Gatsby] and [Airtable].
 
+Heavily influenced by [DEV.IRL], a lot of it is straight up jacked
+from there!!
+
 ## Get Involved!
 
 Clone the repo:
@@ -97,3 +100,4 @@ yarn dev
 [gatsby]: https://www.gatsbyjs.org/
 [airtable]: https://airtable.com/
 [here is the database]: https://airtable.com/tbl7wmrtCZcd5M397
+[dev.irl]: https://github.com/thepracticaldev/IRL.DEV
