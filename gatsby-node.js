@@ -9,10 +9,6 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         nodes {
           data {
             id
-            Title
-            Description
-            Date
-            City
           }
         }
       }
