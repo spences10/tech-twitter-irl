@@ -4,11 +4,11 @@ export default ({ data }) => {
   const event = data.airtable.data
   return (
     <>
-      <h2>{event.Title}</h2>
+      <h2>{event.Event_Title}</h2>
       <h4>
         Host:{' '}
-        <a href={`https://twitter.com/${event.Username}`}>
-          {event.Organiser}
+        <a href={`https://twitter.com/${event.Twitter_Username}`}>
+          {event.Organiser_Name}
         </a>
       </h4>
       <h4>
@@ -30,13 +30,12 @@ export const query = graphql`
     airtable(data: { id: { eq: $id } }) {
       data {
         id
-        Title
+        Event_Title
         Description
-        Link
         Date
         City
-        Organiser
-        Username
+        Organiser_Name
+        Twitter_Username
         Venue
       }
     }

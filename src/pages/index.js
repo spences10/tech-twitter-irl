@@ -42,7 +42,7 @@ export const indexQuery = graphql`
       nodes {
         data {
           id
-          Title
+          Event_Title
           Description
           Date
           City
