@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-styled-components",
+  "name": "tech-twitter-irl",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Meetups for tech twitter.",
   "version": "0.1.0",
   "author": "Scott Spence <yo@scottspence.dev>",
   "dependencies": {
