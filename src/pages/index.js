@@ -1,8 +1,7 @@
 import { graphql, Link } from 'gatsby'
 import React from 'react'
 import { EventList } from '../components/events-list'
-import Image from '../components/image'
-import { H1, P } from '../components/page-elements'
+import { H1 } from '../components/page-elements'
 import SEO from '../components/seo'
 
 export default function IndexPage({ data }) {
@@ -21,16 +20,12 @@ export default function IndexPage({ data }) {
   return (
     <>
       <SEO title="Home" />
-      <H1>Hi people</H1>
-      <P>Welcome to your Tech Twitter IRL.</P>
-      <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-        <Image />
-      </div>
+      <H1>Welcome to your Tech Twitter IRL.</H1>
+      <Link to="/organisers">Organise Your Meetup!</Link>
       <EventList
         futureEvents={futureEvents}
         pastEvents={pastEvents}
       />
-      <Link to="/page-2/">Go to page 2</Link>
     </>
   )
 }

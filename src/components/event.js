@@ -1,14 +1,23 @@
 import { Link } from 'gatsby'
 import React from 'react'
+import styled from 'styled-components'
+import { H3, H4, P } from './page-elements'
+
+const EventWrapper = styled.div`
+  border: solid 1px #000;
+  border-radius: 15px;
+  margin: ${({ theme }) => theme.spacing[4]} 0;
+  padding: ${({ theme }) => theme.spacing[2]};
+`
 
 export const Event = ({ event }) => (
-  <div key={event.Event_Title}>
+  <EventWrapper key={event.Event_Title}>
     <Link to={`/events/${event.id}`}>
-      <h3>{event.Event_Title}</h3>
+      <H3>{event.Event_Title}</H3>
     </Link>
-    <h4>
+    <H4>
       {event.Date} • {event.City}
-    </h4>
-    <p>{event.Description}</p>
-  </div>
+    </H4>
+    <P>{event.Description}</P>
+  </EventWrapper>
 )
