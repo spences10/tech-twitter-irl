@@ -3,7 +3,7 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { Layout } from './components/layout'
 import { H1, H2, H3, H4, P } from './components/page-elements'
-import { GlobalStyle, theme } from './theme/global-style'
+import { GlobalStyle, theme } from './theme'
 
 const components = {
   h1: props => <H1 {...props} />,
