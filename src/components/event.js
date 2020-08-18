@@ -4,10 +4,11 @@ import styled from 'styled-components'
 import { H3, H4, P } from './page-elements'
 
 const EventWrapper = styled.div`
-  border: solid 1px #000;
-  border-radius: 15px;
+  border-radius: ${({ theme }) => theme.borderRadius.lg};
+  box-shadow: ${({ theme }) => theme.boxShadow.lg};
   margin: ${({ theme }) => theme.spacing[4]} 0;
   padding: ${({ theme }) => theme.spacing[2]};
+  background: hsla(0, 0%, 99%, 1);
 `
 
 export const Event = ({ event }) => (
