@@ -99,5 +99,5 @@ yarn dev
 
 [gatsby]: https://www.gatsbyjs.org/
 [airtable]: https://airtable.com/
-[here is the database]: https://airtable.com/tbl7wmrtCZcd5M397
+[here is the database]: https://airtable.com/shrQBKCIhJR6wo9RY
 [dev.irl]: https://github.com/thepracticaldev/IRL.DEV

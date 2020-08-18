@@ -22,8 +22,7 @@ export default function IndexPage({ data }) {
     <>
       <SEO title="Home" />
       <H1>Hi people</H1>
-      <P>Welcome to your new Gatsby site.</P>
-      <P>Now go build something great.</P>
+      <P>Welcome to your Tech Twitter IRL.</P>
       <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
         <Image />
       </div>
