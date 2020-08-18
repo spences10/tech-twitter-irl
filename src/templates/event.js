@@ -16,7 +16,9 @@ export default ({ data }) => {
         {event.Date} • {event.City}
       </H4>
       <H4>
-        <a href={`https://maps.google.com/?q=${event.Venue}`}>
+        <a
+          href={`https://maps.google.com/?q=${event.Venue} ${event.City}`}
+        >
           {event.Venue}
         </a>
       </H4>
