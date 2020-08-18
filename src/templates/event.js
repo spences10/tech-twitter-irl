@@ -1,25 +1,26 @@
 import React from 'react'
+import { H2, H4, P } from '../components/page-elements'
 
 export default ({ data }) => {
   const event = data.airtable.data
   return (
     <>
-      <h2>{event.Event_Title}</h2>
-      <h4>
+      <H2>{event.Event_Title}</H2>
+      <H4>
         Host:{' '}
         <a href={`https://twitter.com/${event.Twitter_Username}`}>
           {event.Organiser_Name}
         </a>
-      </h4>
-      <h4>
+      </H4>
+      <H4>
         {event.Date} • {event.City}
-      </h4>
-      <h4>
+      </H4>
+      <H4>
         <a href={`https://maps.google.com/?q=${event.Venue}`}>
           {event.Venue}
         </a>
-      </h4>
-      <p>{event.Description}</p>
+      </H4>
+      <P>{event.Description}</P>
       <a href={event.Link}>DETAILS || RSVP</a>
     </>
   )
@@ -37,6 +38,7 @@ export const query = graphql`
         Organiser_Name
         Twitter_Username
         Venue
+        Link
       }
     }
   }
